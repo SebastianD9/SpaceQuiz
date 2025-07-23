@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceQuiz</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/ecfd500718.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- BG -->
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+        <div class="stars" id="stars"></div>
+    <!-- BG-->
+
+    <div class="start container">
+        <h1>SPACE<br>QUIZ</h1>
+        <button class="btnStart">Start <i class="fa-solid fa-chevron-right"></i>  </button>
+    </div>
+
+    <div class=RANGEwrapper>
+        <div class="range">
+        Wybierz ilość pytań
+        <div class="chooseRange">
+        <div class="value">1</div>
+          <input type="range" min="1" value="0" id="range" />
+        </div> 
+          <button class="btnStartQuest">Start!</button>
+        </div>
+        
+      </div>
+
+    <div class="Firstquestion container-Firstquestion">
+        <div class="text">
+            <div class="quest"></div>
+            <div class="answer"></div>
+        </div>
+       
+    </div> 
+    <div class="container-End">
+        <div class="endtext">
+
+        </div>
+
+        <div class="maximum">
+        </div>
+       
+        <button  class="oncemore" onClick="window.location.reload();">OD NOWA</button>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
+    <script src = "js/Range.js"></script>
+</body>
+</html>
