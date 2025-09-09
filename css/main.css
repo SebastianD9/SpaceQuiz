@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes aurora-animation {
   0% {
     transform: translate(0%, 0%) rotate(0deg);
@@ -46,8 +47,8 @@
     width: 30em;
   }
   to {
-    height: 20em;
-    width: 20em;
+    height: 30em;
+    width: 22em;
   }
 }
 *, *::before, *::after {
@@ -75,6 +76,69 @@ body {
 
 body.animating {
   overflow: hidden;
+}
+
+.Info {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.Info:hover {
+  transform: scale(1.2);
+}
+
+.PopUp {
+  background-color: #000000;
+  z-index: 100000 !important;
+  position: absolute;
+  display: none;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #F7F7F7;
+  width: 40em;
+  height: 30em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.PopUp p {
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+.stopka {
+  position: fixed;
+  bottom: 0em;
+  left: 0;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content; /* dopasowanie do treści */
+  margin: 0 auto;
+  color: white;
+  padding: 1em;
+  font-size: 0.8em;
+}
+.stopka span {
+  color: blue;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.stopka span:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -118,8 +182,8 @@ body.animating {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 30em;
-  height: 30em;
+  width: 35em;
+  height: 40em;
   color: #F7F7F7;
   border: 1px solid #F7F7F7;
   border-radius: 1px;
@@ -128,8 +192,17 @@ body.animating {
   z-index: 200;
 }
 .container-End button {
+  font-size: 1.2em;
+  height: 2.8em !important;
+  width: 50%;
+  margin: 0.5em;
+  justify-content: center;
   display: none;
   opacity: 0;
+}
+
+.oncemore {
+  margin-bottom: 1em !important;
 }
 
 h1 {
@@ -273,14 +346,23 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
   animation: opacityoff 2s forwards;
   animation-delay: 2s;
   opacity: 0;
   justify-content: space-around;
   padding-top: 0;
   padding: 0.5em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  overflow-x: hidden;
+}
+
+.HistoryAnswers {
+  display: none;
+  overflow-y: scroll;
+  height: 20em;
+  margin-bottom: 1em !important;
+  scrollbar-width: thin;
+  scrollbar-color: #4caf50 #222;
 }
 
 .aurora {

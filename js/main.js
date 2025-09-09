@@ -33,12 +33,19 @@ const createStars = () => {
   const endtext = document.querySelector('.endtext');
   const answer = document.querySelector('.answer');
   const oncemore = document.querySelector('.oncemore');
+  const ListAnswer = document.querySelector('.check');
+  const Historyy = document.querySelector('.HistoryAnswers');
+  const INFO = document.querySelector(".Info");
+  const PopUp = document.querySelector(".PopUp");
+  const InfoClose = document.querySelector(".close");
   let score = 0;
   let runda = 1;
   let per='';
   let check = false;
   let randomIndex = Math.floor(Math.random() * myQuestions.length);
   const lenght = [];
+
+
 
   const range = () => {
     RANGE.style.display="flex";
@@ -48,6 +55,10 @@ const createStars = () => {
       RANGEtext.style.animation = "opacityoff 1s forwards";
       ;}, 2000);
   }
+
+  const playedQuestions = [];
+  const userAnswers = [];
+
   const firstquest = () => {
     console.log(RangeNumber);
     first.style.display ="flex";
@@ -55,6 +66,9 @@ const createStars = () => {
     RANGEtext.style.animation = "opacityon 1s forwards";
     showQuestions();
     showAnswers();
+
+  playedQuestions.push(myQuestions[randomIndex]);
+
     lenght.push(randomIndex);
     myQuestions.splice(randomIndex, 1);
   }
@@ -85,6 +99,9 @@ const checkAnswer = e => {
   OK = e.target.closest("p").textContent;
   console.log(OK);
   console.log(per);
+
+  userAnswers.push(OK[0]);
+
     if (per == OK[0] && a==b){
       score+=1;
     }
@@ -108,6 +125,8 @@ const nextquest =(e) =>{
   showAnswers();
   showQuestions();
   
+    playedQuestions.push(myQuestions[randomIndex]);
+
   myQuestions.splice(randomIndex, 1);
   lenght.push(randomIndex);
   check=false;
@@ -120,6 +139,9 @@ const TheEnd = ()=> {
   setTimeout( () => {
   oncemore.style.display="flex";
   oncemore.style.animation = "opacityoff 1s forwards";
+  ListAnswer.style.display="flex";
+  ListAnswer.style.animation="opacityoff 1s forwards";
+
   ;}, 2000);
   last.style.display="flex";
   text.style.display="none";
@@ -131,6 +153,43 @@ const TheEnd = ()=> {
   //console.log("XD");
 
 }
+
+ListAnswer.addEventListener("click", () => {
+  console.clear();
+  endtext.remove();
+  ListAnswer.remove();
+  //oncemore.style.display = "none";
+  finalmax.innerHTML = '';
+
+  let html = "";
+    playedQuestions.forEach((q, index) => {
+    html += `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+    for (let key in q.answers) {
+      const isCorrect = key === q.correctAnswer;
+      const isSelected = key === userAnswers[index];
+
+      let style = "";
+      if (isCorrect) style = "color: green;";
+      if (isSelected && !isCorrect) style = "color: orange;";
+
+      html += `<p style="${style}">&nbsp;&nbsp;${key}: ${q.answers[key]}${isCorrect ? " (poprawna)" : ""}${isSelected && !isCorrect ? " (wybrana)" : ""}</p>`;
+    }
+  });
+  Historyy.style.display = "block";
+  Historyy.innerHTML = html;
+});
+
+INFO.addEventListener("click", () => {
+  PopUp.style.display="flex";
+
+})
+
+InfoClose.addEventListener("click", () => {
+  PopUp.style.display="none";
+  console.log("Siemanko");
+})
+
+
   
   start.addEventListener('click', range);
   startQuestions.addEventListener('click', firstquest);

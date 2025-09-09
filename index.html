@@ -20,6 +20,31 @@
         <div class="stars" id="stars"></div>
     <!-- BG-->
 
+    <div class="Info">
+        <img src="icons/info.svg" alt="Info" width="50" height="50" background-color="green">
+        
+    </div>
+    <div class="PopUp">
+        <img src="icons/x.svg" class="close" alt="close" width="50" height="50" background-color="red">
+            <div class="PopUp_Text">
+                <h1>INFO</h1>
+                <p>Siemanko! Witam Cię na kosmicznym quizie! Quiz ten powstał z myślą o każdym miłośniku kosmosu
+                    i rzeczy z nim związanych (ciężko było mi znaleźć quiz o takiej tematyce więc wziąłem sprawy w swoje ręcę). <br><br>
+
+                    Quiz będzie ciągle rozwijany. Docelowo mam w planach dodanie podkategorii quizu. Przykładowo: optyka, detekcja sygnałów optycznych,
+                    napędy rakietowe, termodynamika i inne kategorie związane z inżynierią kosmiczną. <br><br>
+
+                    Będę bardzo wdzięczny za każdy odzew. Może znajdzie się ktoś chętny do pomocy przy tworzeniu stronki? Proszę o kontakt mailowy: ... <br><br>
+
+                    Niech Moc Będzie z Wami! Powodzenia w Quizie! 
+                </p>
+            </div>
+    </div>
+
+    <div class="stopka">
+        <p>Podoba Ci się ten quiz? Możesz pomóc w rozwoju stronki i postawić kawkę klikając <span>Tutaj!</span>, Dzięki! </p>
+    </div>
+
     <div class="start container">
         <h1>SPACE<br>QUIZ</h1>
         <button class="btnStart">Start <i class="fa-solid fa-chevron-right"></i>  </button>
@@ -52,7 +77,11 @@
         <div class="maximum">
         </div>
        
+        <div class="HistoryAnswers"></div>
+       
+        <button class="check" > SPRAWDŹ ODPOWIEDZI </button>
         <button  class="oncemore" onClick="window.location.reload();">OD NOWA</button>
+
     </div>
     <script src="js/questions.js"></script>
     <script src="js/main.js"></script>

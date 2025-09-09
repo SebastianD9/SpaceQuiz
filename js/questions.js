@@ -159,5 +159,97 @@ const myQuestions = [
       },
       correctAnswer: "a"
     },
+    {
+      question: "Kto pierwszy stanął na powierzchni Księżyca?",
+      answers: {
+        a: "Neil Armstrong",
+        b: "Buzz Aldrin",
+        c: "Michael Collins",
+        d: "Charles Conrad"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Czym jest termistor?",
+      answers: {
+        a: "Kilka termopar połączonych szeregowo",
+        b: "Czujnik światła (detektor fotonowy)",
+        c: "Bolometr ze spieku tlenków metali m.in niklu, kobaltu i manganu",
+        d: "Detektor termiczny, którego zasadą działania jest efekt Seebecka"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Jaki jest zakres długości fal promieniowania MWIR (podczerwień)?",
+      answers: {
+        a: "0,4 - 0,7 µm",
+        b: "1 - 3 µm",
+        c: "3 - 5 µm",
+        d: "8 - 14 µm"
+      },
+    correctAnswer: "c"
+    },
+    {
+      question: "Jaki jest zakres długości fal promieniowania widzialnego?",
+      answers: {
+        a: "380 - 750 nm",
+        b: "120 - 380 nm",
+        c: "750 - 1400 nm",
+        d: "3000 - 5000 nm"
+      },
+    correctAnswer: "a"
+    },
+    {
+      question: "Zmianę pędu na jednostkę masy paliwa definiuje się jako:",
+      answers: {
+        a: "Impuls właściwy",
+        b: "Ciąg właściwy",
+        c: "Wydajność układu napędowego",
+        d: "Prędkość wylotowa gazów"
+      },
+    correctAnswer: "a"
+    },
+    {
+      question: "Ile wymiarów przestrzennych (łącznie z czasem) zakłada teoria strun typu IIA/IIB?",
+      answers: {
+        a: "4",
+        b: "10",
+        c: "11",
+        d: "26"
+      },
+  correctAnswer: "b"
+  },
+  {
+      question: "Jaką zaletę mają matryce CMOS w stosunku do matryc CCD?",
+      answers: {
+        a: "Mniejsze zużycie energii",
+        b: "Lepsza odporność na wysokie napięcia",
+        c: "Zawsze większa czułość na podczerwień",
+        d: "Brak potrzeby stosowania obiektywu"
+      },
+      correctAnswer: "a"
+  },
+  {
+      question: "Jaka jest główna rola warstwy I (intrinsic) w fotodiodzie PIN?",
+      answers: {
+        a: "Stabilizuje napięcie zasilania",
+        b: "Działa jako filtr optyczny",
+        c: "Zwiększa szerokość obszaru zubożenia i poprawia zbieranie fotonów",
+        d: "Zwiększa efekt fotoemisji katody"
+      },
+      correctAnswer: "c" 
+  },
+  {
+      question: "Jakie paliwo stosują silniki Raptor w rakiecie Starship?",
+      answers: {
+        a: "Kerosene (RP-1) i ciekły tlen",
+        b: "Ciekły metan i ciekły tlen",
+        c: "Wodór i ciekły tlen",
+        d: "Hipergolowe paliwa MMH/N2O4"
+      },
+      correctAnswer: "b"
+  }
+
+
     
   ];
